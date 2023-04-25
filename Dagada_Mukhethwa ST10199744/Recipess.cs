@@ -32,15 +32,40 @@ namespace Dagada_Mukhethwa_ST10199744
                 string unit = Console.ReadLine();
             }
         }
-            public void EnterSteps()
+        public void EnterSteps()
+        {
+            Console.Write("Enter number of steps: ");
+            int numSteps = int.Parse(Console.ReadLine());
+            _steps = new string[numSteps];
+
+            for (int i = 0; i < numSteps; i++)
             {
-                Console.Write("Enter number of steps: ");
-                int numSteps = int.Parse(Console.ReadLine());
-                _steps = new string[numSteps];
+                Console.Write($"Enter step {i + 1}: ");
+                _steps[i] = Console.ReadLine();
 
-                for (int i = 0; i < numSteps; i++)
+            }
+        }
+
+        public void DisplayRecipe()
+        {
+            Console.WriteLine("\nRecipe:");
+
+            if (_ingredients != null)
+            {
+                Console.WriteLine("Ingredients:");
+                foreach (Ingredient ingredient in _ingredients)
                 {
-                    Console.Write($"Enter step {i + 1}: ");
-                    _steps[i] = Console.ReadLine();
-
+                    Console.WriteLine($"{ingredient.Quantity} {ingredient.Unit} {ingredient.Name}");
                 }
+            }
+
+            if (_steps != null)
+            {
+                Console.WriteLine("\nSteps:");
+                for (int i = 0; i < _steps.Length; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {_steps[i]}");
+                }
+            }
+        }
+
