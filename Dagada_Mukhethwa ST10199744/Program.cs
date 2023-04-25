@@ -16,6 +16,8 @@ namespace Dagada_Mukhethwa_ST10199744
 
             while (!exit)
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Welcome to the recipe application");
                 Console.WriteLine("\nMenu:");
                 Console.WriteLine("1. Enter ingredients");
                 Console.WriteLine("2. Enter steps");
@@ -32,15 +34,16 @@ namespace Dagada_Mukhethwa_ST10199744
                 switch (choice)
                 {
                     case 1:
-                        recipe.EnterIngredients();
+                        recipe.EnterIngredientss();
                         break;
                     case 2:
                         recipe.EnterSteps();
                         break;
                     case 3:
-                        recipe.DisplayRecipe();
+                        recipe.DisplayRecipess();
                         break;
                     case 4:
+
                         Console.Write("Enter scale factor: ");
                         decimal factor = decimal.Parse(Console.ReadLine());
                         recipe.ScaleRecipess(factor);

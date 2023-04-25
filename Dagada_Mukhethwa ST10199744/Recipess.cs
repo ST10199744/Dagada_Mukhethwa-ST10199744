@@ -8,7 +8,7 @@ namespace Dagada_Mukhethwa_ST10199744
 {
     internal class Recipess
     {
-        private Ingredient[] _ingredients;
+        private Ingredientss[] _ingredients;
         private string[] _steps;
         public Recipess()
         {
@@ -16,11 +16,12 @@ namespace Dagada_Mukhethwa_ST10199744
             _steps = null;
         }
 
-        public void EnterIngredients()
+        public void EnterIngredientss()
         {
+            Console.BackgroundColor = ConsoleColor.Green;
             Console.Write("Enter number of ingredients: ");
             int numIngredients = int.Parse(Console.ReadLine());
-            _ingredients = new Ingredient[numIngredients];
+            _ingredients = new Ingredientss[numIngredients];
 
             for (int i = 0; i < numIngredients; i++)
             {
@@ -46,14 +47,14 @@ namespace Dagada_Mukhethwa_ST10199744
             }
         }
 
-        public void DisplayRecipe()
+        public void DisplayRecipess()
         {
             Console.WriteLine("\nRecipe:");
 
             if (_ingredients != null)
             {
-                Console.WriteLine("Ingredients:");
-                foreach (Ingredient ingredient in _ingredients)
+                Console.WriteLine("Ingredientss:");
+                foreach (Ingredientss ingredient in _ingredients)
                 {
                     Console.WriteLine($"{ingredient.Quantity} {ingredient.Unit} {ingredient.Name}");
                 }
@@ -73,7 +74,7 @@ namespace Dagada_Mukhethwa_ST10199744
         {
             if (_ingredients != null)
             {
-                foreach (Ingredient ingredient in _ingredients)
+                foreach (Ingredientss ingredient in _ingredients)
                 {
                     ingredient.Quantity *= factor;
                 }
@@ -86,10 +87,11 @@ namespace Dagada_Mukhethwa_ST10199744
         {
             if (_ingredients != null)
             {
-                foreach (Ingredient ingredient in _ingredients)
+                foreach (Ingredientss ingredient in _ingredients)
                 {
                     ingredient.Quantity /= 2;
                 }
+
             }
         }
         public void ClearRecipess()
@@ -99,5 +101,6 @@ namespace Dagada_Mukhethwa_ST10199744
         }
     }
 }
+
 
 
