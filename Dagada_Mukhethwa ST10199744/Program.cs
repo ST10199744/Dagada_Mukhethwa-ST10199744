@@ -10,6 +10,9 @@ namespace Dagada_Mukhethwa_ST10199744
     {
         static void Main(string[] args)
         {
+            Recipe recipe = new Recipe();
+
+            bool exit = false;
         }
     }
 }
