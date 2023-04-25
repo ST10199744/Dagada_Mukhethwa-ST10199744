@@ -69,31 +69,35 @@ namespace Dagada_Mukhethwa_ST10199744
             }
         }
 
-            public void ScaleRecipe(decimal factor)
+        public void ScaleRecipess(decimal factor)
+        {
+            if (_ingredients != null)
             {
-                if (_ingredients != null)
+                foreach (Ingredient ingredient in _ingredients)
                 {
-                    foreach (Ingredient ingredient in _ingredients)
-                    {
-                        ingredient.Quantity *= factor;
-                    }
-
+                    ingredient.Quantity *= factor;
                 }
+
             }
         }
 
-                public void ResetRecipe()
-                {
-                    if (_ingredients != null)
-                    {
-                        foreach (Ingredient ingredient in _ingredients)
-                        {
-                            ingredient.Quantity /= 2;
-                        }
-                    }
-                }
 
+        public void ResetRecipess()
+        {
+            if (_ingredients != null)
+            {
+                foreach (Ingredient ingredient in _ingredients)
+                {
+                    ingredient.Quantity /= 2;
+                }
+            }
+        }
+        public void ClearRecipess()
+        {
+            _ingredients = null;
+            _steps = null;
         }
     }
+}
 
 

@@ -10,7 +10,7 @@ namespace Dagada_Mukhethwa_ST10199744
     {
         static void Main(string[] args)
         {
-            Recipe recipe = new Recipe();
+            Recipess recipe = new Recipess();
 
             bool exit = false;
 
@@ -46,15 +46,18 @@ namespace Dagada_Mukhethwa_ST10199744
                         recipe.ScaleRecipe(factor);
                         break;
                     case 5:
-                        recipe.ResetRecipe();
+                        recipe.ResetRecipess();
                         break;
                     case 6:
-                        recipe.ClearRecipe();
+                        recipe.ClearRecipess();
 
                 }
             }
+        }
     }
 }
+   
+
         
     
 
