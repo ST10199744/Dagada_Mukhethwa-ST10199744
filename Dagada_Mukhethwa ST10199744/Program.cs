@@ -43,13 +43,14 @@ namespace Dagada_Mukhethwa_ST10199744
                     case 4:
                         Console.Write("Enter scale factor: ");
                         decimal factor = decimal.Parse(Console.ReadLine());
-                        recipe.ScaleRecipe(factor);
+                        recipe.ScaleRecipess(factor);
                         break;
                     case 5:
                         recipe.ResetRecipess();
                         break;
                     case 6:
                         recipe.ClearRecipess();
+                        break;
 
                 }
             }
