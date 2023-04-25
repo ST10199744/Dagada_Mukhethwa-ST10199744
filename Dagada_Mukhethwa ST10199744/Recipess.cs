@@ -67,5 +67,18 @@ namespace Dagada_Mukhethwa_ST10199744
                     Console.WriteLine($"{i + 1}. {_steps[i]}");
                 }
             }
+
+            public void ScaleRecipe(decimal factor)
+            {
+                if (_ingredients != null)
+                {
+                    foreach (Ingredient ingredient in _ingredients)
+                    {
+                        ingredient.Quantity *= factor;
+                    }
+                }
+            }
         }
+    }
+}
 
