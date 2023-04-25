@@ -31,4 +31,16 @@ namespace Dagada_Mukhethwa_ST10199744
                 Console.Write("Enter unit of measurement: ");
                 string unit = Console.ReadLine();
             }
-}
+        }
+            public void EnterSteps()
+            {
+                Console.Write("Enter number of steps: ");
+                int numSteps = int.Parse(Console.ReadLine());
+                _steps = new string[numSteps];
+
+                for (int i = 0; i < numSteps; i++)
+                {
+                    Console.Write($"Enter step {i + 1}: ");
+                    _steps[i] = Console.ReadLine();
+
+                }
