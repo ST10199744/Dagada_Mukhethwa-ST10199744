@@ -27,8 +27,32 @@ namespace Dagada_Mukhethwa_ST10199744
 
                 Console.Write("\nEnter choice: ");
                 int choice = int.Parse(Console.ReadLine());
+
+
+                switch (choice)
+                {
+                    case 1:
+                        recipe.EnterIngredients();
+                        break;
+                    case 2:
+                        recipe.EnterSteps();
+                        break;
+                    case 3:
+                        recipe.DisplayRecipe();
+                        break;
+                    case 4:
+                        Console.Write("Enter scale factor: ");
+                        decimal factor = decimal.Parse(Console.ReadLine());
+                        recipe.ScaleRecipe(factor);
+                        break;
+                    case 5:
+                        recipe.ResetRecipe();
+                        break;
+                    case 6:
+                        recipe.ClearRecipe();
+
+                }
             }
-        }
     }
 }
         
